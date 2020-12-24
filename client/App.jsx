@@ -56,14 +56,14 @@ class App extends React.Component {
 
 
   handleResize (e) {
-    // console.log('handling resize...');
+
     this.setState({ windowWidth: window.innerWidth });
     if (this.state.modal === false && window.innerWidth > 743) {
       document.getElementsByClassName('overlay')[0].classList.remove(styles.hidden);
     } else if ( this.state.modal === true && window.innerWidth > 743) {
       document.getElementsByClassName('overlay')[0].classList.add(styles.hidden);
     }
-    // console.log(this.state.windowWidth);
+
   }
 
   componentWillUnMount() {
